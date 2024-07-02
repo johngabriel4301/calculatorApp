@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body>
+    <nav class="h-10 w-full bg-amber-600 text-white flex items-center justify-center fixed top-0">
+        <h1>Simple Calculator App</h1>
+    </nav>
+
+    <div class="h-screen w-full flex items-center justify-center">
+        <div class="mainframe h-3/5 lg:h-4/6 w-9/12 sm:w-6/12 md:w-4/12 lg:w-1/4 rounded-lg flex justify-center p-5 pt-10">
+            <form class="h-full w-full">
+                <input type="text" name="screen" class="outline-none border-none p-3 w-full bg-slate-50">
+
+                <div class="mt-4 flex justify-around">
+                    <button type="button" onclick = "screen.value = '' " class="h-10 w-12 bg-amber-200 rounded-md hover:opacity-75">CA</button>
+                    <button type="button" onclick = "screen.value = screen.value.toString().slice(0,-1)" class="h-10 w-12 bg-red-200 rounded-md hover:opacity-75">DE</button>
+                    <button type="button" onclick = "screen.value += '.'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >.</button>
+                    <button type="button" onclick = "screen.value += '/'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75">/</button>
+                </div>
+
+                <div class="mt-4 flex justify-around">
+                    <button type="button" onclick = "screen.value += '9'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >9</button>
+                    <button type="button" onclick = "screen.value += '8'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >8</button>
+                    <button type="button" onclick = "screen.value += '7'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >7</button>
+                    <button type="button" onclick = "screen.value += '*'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >x</button>
+                </div>
+
+                <div class="mt-4 flex justify-around">
+                    <button type="button" onclick = "screen.value += '6'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >6</button>
+                    <button type="button" onclick = "screen.value += '5'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >5</button>
+                    <button type="button" onclick = "screen.value += '4'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >4</button>
+                    <button type="button" onclick = "screen.value += '-'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75" >-</button>
+                </div>
+
+                <div class="mt-4 flex justify-around">
+                    <button type="button"  onclick = "screen.value += '3'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75">3</button>
+                    <button type="button"  onclick = "screen.value += '2'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75">2</button>
+                    <button type="button"  onclick = "screen.value += '1'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75">1</button>
+                    <button type="button"  onclick = "screen.value += '+'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75">+</button>
+                </div>
+
+                <div class="mt-4 flex justify-around">
+                    <button type="button" onclick = "screen.value += '0'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75">0</button>
+                    <button type="button" onclick = "screen.value += '00'" class="h-10 w-12 bg-slate-200 rounded-md hover:opacity-75">00</button>
+                    <button type="button" onclick = "screen.value = eval(screen.value)" class="h-10 w-28 bg-slate-200 rounded-md hover:opacity-75">=</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
